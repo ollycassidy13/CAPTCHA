@@ -1,0 +1,21 @@
+seed: 42                              
+data_dir: "captcha_images"             
+val_split: 0.10
+test_split: 0.10
+
+img_width: 160                        
+img_height: 60
+max_label_len: 12                      
+char_set: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+blank_char: "_"                  
+
+train:
+  batch_size: 128
+  epochs: 60
+  learning_rate: 1.0e-3
+  early_stop_patience: 8
+  reduce_lr_patience: 4
+  weight_decay: 1.0e-4
+  mixed_precision: true
+  modeldir: "model"
+  logdir:   "logs"
