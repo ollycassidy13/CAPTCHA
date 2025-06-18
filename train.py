@@ -32,6 +32,7 @@ class CTCLoss(tf.keras.losses.Loss):
 @main(version_base=None, config_path=".", config_name="config")
 def train(cfg):
     set_seeds(cfg.seed)
+    print("GPU Available: ", tf.config.list_physical_devices('GPU'))
     enable_mixed_precision(cfg)
 
     ds_train, ds_val, _ = get_dataset(cfg)
